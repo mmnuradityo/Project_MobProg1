@@ -11,9 +11,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
-        <activity android:name="com.mmnuradityo.projectmobprog1.SecondActivity"/>
-        <activity android:name="com.mmnuradityo.projectmobprog1.FirstActivity" />
-        <activity android:name="com.mmnuradityo.projectmobprog1.MainActivity">
+        <activity android:name=".FragmentActivity"></activity>
+        <activity android:name=".SecondActivity" />
+        <activity android:name=".FirstActivity" />
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

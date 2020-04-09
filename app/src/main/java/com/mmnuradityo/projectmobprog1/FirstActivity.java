@@ -36,7 +36,7 @@ public class FirstActivity extends AppCompatActivity {
         btnActivityFragment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                startActivity(new Intent(FirstActivity.this, FragmentActivity.class));
             }
         });
 
