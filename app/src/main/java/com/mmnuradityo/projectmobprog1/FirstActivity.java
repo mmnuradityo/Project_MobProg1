@@ -13,6 +13,7 @@ public class FirstActivity extends AppCompatActivity {
     private TextView tvUser;
     private Button btnActivity;
     private Button btnActivityFragment;
+    private Button btnRecylerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +24,7 @@ public class FirstActivity extends AppCompatActivity {
         tvUser = findViewById(R.id.tv_user);
         btnActivity = findViewById(R.id.btn_pindah_activity);
         btnActivityFragment = findViewById(R.id.btn_pindah_activity_fragment);
+        btnRecylerView = findViewById(R.id.btn_pindah_recyclerview);
 
         tvUser.setText(nama);
 
@@ -37,6 +39,13 @@ public class FirstActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(FirstActivity.this, FragmentActivity.class));
+            }
+        });
+
+        btnRecylerView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(FirstActivity.this, RecyclerViewActivity.class));
             }
         });
 
