@@ -9,28 +9,42 @@
         android:id="@+id/btn_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        android:paddingLeft="6dp"
+        android:paddingRight="6dp">
 
         <Button
-            android:id="@+id/btn_fragment_1"
+            android:id="@+id/btn_fragment_Browser"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="6dp"
             android:layout_weight="1"
             android:background="@drawable/bg_container"
             android:backgroundTint="@android:color/holo_red_light"
-            android:text="fragment 1"
+            android:text="Bbrowser"
             android:textColor="@android:color/white" />
 
         <Button
-            android:id="@+id/btn_fragment_2"
+            android:id="@+id/btn_fragment_file_manager"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="6dp"
             android:layout_weight="1"
             android:background="@drawable/bg_container"
             android:backgroundTint="@android:color/holo_green_light"
-            android:text="fragment 2"
+            android:text="File"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/btn_fragment_camera"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_container"
+            android:backgroundTint="@android:color/holo_blue_bright"
+            android:text="Camera"
             android:textColor="@android:color/white" />
 
     </LinearLayout>
@@ -39,6 +53,18 @@
         android:id="@+id/fragmnet_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/btn_container" />
+        android:layout_below="@+id/btn_container"
+        android:background="@android:color/white" />
+
+    <TextView
+        android:id="@+id/tv_text_option"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/btn_container"
+        android:gravity="center"
+        android:text="Pilih Opsi di atas"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
 </RelativeLayout>
