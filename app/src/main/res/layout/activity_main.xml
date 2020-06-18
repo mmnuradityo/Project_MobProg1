@@ -99,10 +99,11 @@
                             android:textSize="@dimen/text_size" />
 
                         <TextView
+                            android:id="@+id/tv_nim"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
-                            android:text="12.34.5678 "
+                            android:text="12"
                             android:textColor="@android:color/white"
                             android:textSize="@dimen/text_size" />
 
@@ -124,6 +125,28 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="18dp"
                 android:layout_marginTop="220dp"
+                android:layout_marginEnd="18dp"
+                android:padding="2dp"
+                android:text="Masukan Username Untuk Login "
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_size" />
+
+            <EditText
+                android:id="@+id/et_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="18dp"
+                android:hint="Masukkan Username"
+                android:inputType="text"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginEnd="18dp"
                 android:padding="2dp"
                 android:text="Masukan Password Untuk Login "
