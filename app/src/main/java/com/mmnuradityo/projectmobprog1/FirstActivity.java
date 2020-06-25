@@ -1,7 +1,6 @@
 package com.mmnuradityo.projectmobprog1;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -17,11 +16,18 @@ public class FirstActivity extends AppCompatActivity {
     private Button btnActivityFragment;
     private Button btnRecylerView;
     private Button btnLogout;
+    private Button btnNotif;
+    private String textFromNotif = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first);
+
+        Intent intent = getIntent();
+        if (intent != null) {
+            textFromNotif = intent.getStringExtra(NotificationUtil.NOTIFICATION_KEY);
+        }
 
         SessionUtil preferences = SessionUtil.init(getApplicationContext());
 
@@ -35,6 +41,7 @@ public class FirstActivity extends AppCompatActivity {
         btnActivityFragment = findViewById(R.id.btn_pindah_activity_fragment);
         btnRecylerView = findViewById(R.id.btn_pindah_recyclerview);
         btnLogout = findViewById(R.id.btn_logout);
+        btnNotif = findViewById(R.id.btn_notif);
 
         tvUser.setText(nama);
 
@@ -68,7 +75,16 @@ public class FirstActivity extends AppCompatActivity {
                 finish();
             }
         });
+        btnNotif.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(FirstActivity.this, NotificationActivity.class));
+            }
+        });
 
+        if (textFromNotif != null && !textFromNotif.equals("")) {
+            Toast.makeText(this, "Text From Notif : " + textFromNotif, Toast.LENGTH_SHORT).show();
+        }
     }
 
 }
